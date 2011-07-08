@@ -10,16 +10,13 @@ def currentRouteBerechnen(myRoute)
   0.upto(myRoute.length - 2) do |i|
 
     tempDist = @currentRoute[myRoute[i] + '-' + myRoute[i+1]].to_i
-    if(tempDist == 0)                                          
-      tempDist = @currentRoute[myRoute[i+1] + '-' + myRoute[i]].to_i  
         if(tempDist == 0)                                      
           return "Routenberechnung nicht moeglich."
         end
-    end
      summe += tempDist
   end
   return summe
 end
 
 # -- Aufruf der Funktion -- #
-puts currentRouteBerechnen("E-D-C") #von e bis d = 6 von d bis c = 8 SUMME = 6 + 8 = 14
+puts currentRouteBerechnen("A-B-C") #von e bis d = 6 von d bis c = 8 SUMME = 6 + 8 = 14
